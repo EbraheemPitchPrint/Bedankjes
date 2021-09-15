@@ -2,7 +2,7 @@
 
     fetch('https://rasengan01.myshopify.com/admin/oauth/access_scopes.json', {
         headers: {
-            'X-Shopify-Access-Token': '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',
+            'X-Shopify-Access-Token': 'e481375958f3313e5fb54e4090a4ba0b',
         },
     })
     .then(response => response.json())
