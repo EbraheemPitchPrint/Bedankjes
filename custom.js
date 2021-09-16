@@ -8,7 +8,7 @@ var shop = 'rasengan01',
     access_mode = 'value';
 
 if (localStorage.getItem("_i") === null) {
-    window.location.href = `https://${shop}.myshopify.com/admin/oauth/authorize?client_id=${client_id}&scope=${scopes}&redirect_uri=${redirect_uri}&state=${nonce}&grant_options[]=${access_mode}`;
+    window.location.href = `https://${shop}.myshopify.com/admin/oauth/authorize?client_id=${client_id}&scope=${scopes}&redirect_uri=${redirectUri}&state=${nonce}&grant_options[]=${access_mode}`;
     localStorage.setItem('_i', true);
 } else {
     console.log(window.location.pathname);
