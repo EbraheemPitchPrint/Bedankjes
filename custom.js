@@ -7,6 +7,7 @@ setTimeout(() => {
     function getProjectData(_e) {
         console.log(_e);
         fetch(baseUrl + `/admin/api/2021-07/products/${_e.data.source.product.id}/metafields.json`, {
+            method: 'POST',
             headers: {
                 'X-Shopify-Access-Token': token,
                 'Accept': "application/json",
