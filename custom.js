@@ -16,7 +16,7 @@ setTimeout(() => {
                 "metafield": {
                     "namespace": "inventory",
                     "key": "designImage",
-                    "value": `${data.previews[0]}`,
+                    "value": `${_e.data.previews[0]}`,
                     "type": "single_line_text_field"
                 }
             })
