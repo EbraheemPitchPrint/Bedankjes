@@ -7,7 +7,7 @@ var productId = '';
 
 if (document.getElementsByName('id')[0]) {
     console.log(document.getElementsByName('id')[0]);
-    productId = document.getElementById('id').value;
+    productId = document.getElementsByName('id')[0].value;
     fetch(baseUrl + `/admin/api/2021-07/products/${productId}.json`, {
         headers: {
             'X-Shopify-Access-Token': token,
