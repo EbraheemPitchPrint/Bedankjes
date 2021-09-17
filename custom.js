@@ -1,9 +1,11 @@
 // JavaScript source code
 
-var token = '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';
-
-function getProductData(_e) {
-    console.log(_e);
-}
-
-ppclient.on('project-saved', getProductData);
+    var token = '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'
+    var baseUrl = 'https://rasengan01.myshopify.com'
+    fetch(baseUrl + '/admin/api/2021-07/products.json', {
+        headers: {
+           'X-Shopify-Access-Token': token,
+        },
+    })
+    .then(response => response.json())
+    .then(data => console.log(data));
