@@ -5,7 +5,8 @@ var baseUrl = 'https://rasengan01.myshopify.com'
 
 var productId = '';
 
-if (document.getElementById('id')) {
+if (document.getElementsByName('id')[0]) {
+    console.log(document.getElementsByName('id')[0]);
     productId = document.getElementById('id').value;
     fetch(baseUrl + `/admin/api/2021-07/products/${productId}.json`, {
         headers: {
