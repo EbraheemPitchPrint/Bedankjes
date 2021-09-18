@@ -27,3 +27,14 @@ setTimeout(() => {
     }
     window.ppclient.on('project-saved', getProjectData);
 }, 2000)
+
+var _cartEl = document.querySelector('.cart-item__quantity');
+
+if (window.location.pathname.indexOf('/cart') > -1) {
+    let btn = document.createElement("button");
+    btn.innerHTML = "Customize";
+    btn.name = "pp";
+    for (var i = 0; i < _cartEl.length; i++) {
+        _cartEl[i].appendChild(btn);
+    }
+}
