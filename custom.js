@@ -1,11 +1,10 @@
 // JavaScript source code
 
-var token = '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'
-var baseUrl = 'https://rasengan01.myshopify.com'
-
 (function (global) {
 	'use strict';
 	if (window.pprintset) return;
+	var token = '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'
+	var baseUrl = 'https://rasengan01.myshopify.com'
 
 	if (window.location.pathname.indexOf('/products/') !== -1) {
 		setTimeout(() => {
