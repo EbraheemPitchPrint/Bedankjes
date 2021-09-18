@@ -31,7 +31,7 @@
 		}, 2000)
 	}
 
-	var _cartForm = document.querySelector('.quantity'), _values, _productId, $ = window.jQuery;
+	var _cartForm = document.querySelector('.cart-item__quantity'), _values, _productId, $ = window.jQuery;
 
 	if (window.location.pathname.indexOf('/cart') !== -1) {
 		if (!_cartForm) return;
@@ -67,13 +67,6 @@
 				}
 
 			});
-
-		$.ajax({
-			type: "GET",
-			dataType: "json",
-			url: '/cart.js',
-			success: _sortCartImages
-		});
 	}
 
 	function _getProject(_id) {
