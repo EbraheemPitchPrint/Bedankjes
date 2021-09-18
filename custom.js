@@ -36,6 +36,10 @@
 	if (window.location.pathname.indexOf('/cart') !== -1) {
 		if (!_cartForm) return;
 
+		for (var x = 0; x < _cartForm.length; x++) {
+			_cartForm[x].insertAdjacentHTML('afterbegin', '<div id="pp_main_btn_sec"><img src="https://pitchprint.io/rsc/images/loaders/spinner_new.svg"style="width:24px"></div>');
+		}
+
 		fetch(baseUrl + `/cart.json`, {
 			method: 'POST',
 			headers: {
@@ -50,8 +54,6 @@
 				for (var i = 0; i < cartItems.length; i++) {
 					var productId = cartItems[i].product_id;
 					console.log(data);
-
-					_cartForm.insertAdjacentHTML('afterbegin', '<div id="pp_main_btn_sec"><img src="https://pitchprint.io/rsc/images/loaders/spinner_new.svg"style="width:24px"></div>');
 
 					_comm('https://api.pitchprint.io/admin/shopify-get-metafield', { id: productId, shop: window.Shopify.shop })
 						.then(_data => {
