@@ -51,7 +51,7 @@
 					var productId = cartItems[i].product_id;
 
 
-					_cartForm[i].insertAdjacentHTML('afterbegin', '<div id="pp_main_btn_sec"><img src="https://pitchprint.io/rsc/images/loaders/spinner_new.svg"style="width:24px"></div>');
+					_cartForm.insertAdjacentHTML('afterbegin', '<div id="pp_main_btn_sec"><img src="https://pitchprint.io/rsc/images/loaders/spinner_new.svg"style="width:24px"></div>');
 
 					_comm('https://api.pitchprint.io/admin/shopify-get-metafield', { id: productId, shop: window.Shopify.shop })
 						.then(_data => {
