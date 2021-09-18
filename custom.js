@@ -27,3 +27,14 @@ setTimeout(() => {
     }
     window.ppclient.on('project-saved', getProjectData);
 }, 2000)
+
+fetch(baseUrl + `/admin/api/2021-07/cart.json`, {
+    method: 'POST',
+    headers: {
+        'X-Shopify-Access-Token': token,
+        'Accept': "application/json",
+        "Content-Type": "application/json"
+    },
+})
+    .then(response => response.json())
+    .then(data => console.log(data));
