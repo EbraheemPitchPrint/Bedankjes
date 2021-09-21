@@ -2,7 +2,7 @@
 
 (function (global) {
 	var token = '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'
-	var baseUrl = 'https://rasengan01.myshopify.com'
+	var baseUrl = 'https://06e971c47c57481972c7cb98d922158b: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@rasengan01.myshopify.com'
 
 	if (window.location.pathname.indexOf('/products/') !== -1) {
 		setTimeout(() => {
