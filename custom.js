@@ -1,7 +1,7 @@
 // JavaScript source code
 
 (function (global) {
-	var token = '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'
+	var token = '06e971c47c57481972c7cb98d922158b'
 	var baseUrl = 'https://rasengan01.myshopify.com'
 
 	if (window.location.pathname.indexOf('/products/') !== -1) {
