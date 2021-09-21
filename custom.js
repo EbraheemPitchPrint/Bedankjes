@@ -27,7 +27,10 @@
 					.then(response => response.json())
 					.then(data => console.log(data));
 			}
-			window.ppclient.on('project-saved', getProjectData);
+			if (window.ppclient) {
+				window.ppclient.on('project-saved', getProjectData);
+			}
+			
 		}, 2000)
 	}
 }(this))
