@@ -27,16 +27,8 @@
 				//})
 				//	.then(response => response.json())
 				//	.then(data => console.log(data));
-				fetch(baseUrl + `products.json`, {
-					method: 'GET',
-					headers: {
-						'X-Shopify-Access-Token': token,
-						'Accept': "application/json",
-						"Content-Type": "application/json"
-					},
-				})
-					.then(response => response.json())
-					.then(data => console.log(data));
+
+
 			}
 			if (window.ppclient) {
 				window.ppclient.on('project-saved', getProjectData);
@@ -44,4 +36,22 @@
 			
 		}, 2000)
 	}
+
+	fetch(baseUrl + `webhooks.json`, {
+		method: 'POST',
+		headers: {
+			'X-Shopify-Access-Token': token,
+			'Accept': "application/json",
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify({
+			"webhook": {
+				"topic": "orders/create",
+				"address": "https://whatever.hostname.com/",
+				"format": "json"
+			}
+		})
+	})
+		.then(response => response.json())
+		.then(data => console.log(data));
 }(this))
