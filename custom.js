@@ -33,7 +33,7 @@
 				if (document.getElementById('_pitchprint')) {
 					var pp = document.getElementById('_pitchprint').value;
 					var design = document.getElementById('designurl');
-					design.value = `https://s3-eu-west-1.amazonaws.com/pitchprint.io/previews/${pp}_1.jpg;`
+					design.value = `https://s3-eu-west-1.amazonaws.com/pitchprint.io/previews/${pp}_1.jpg`
 				}
 			}
 			function setProjectId2(_e) {
