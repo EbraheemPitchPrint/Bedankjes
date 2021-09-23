@@ -38,7 +38,7 @@
 	}
 
 	fetch(baseUrl + `events.json`, {
-		method: 'POST',
+		method: 'GET',
 		headers: {
 			'X-Shopify-Access-Token': token,
 			'Accept': "application/json",
