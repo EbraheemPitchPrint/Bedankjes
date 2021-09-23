@@ -37,20 +37,13 @@
 		}, 2000)
 	}
 
-	fetch(baseUrl + `webhooks.json`, {
+	fetch(baseUrl + `events.json`, {
 		method: 'POST',
 		headers: {
 			'X-Shopify-Access-Token': token,
 			'Accept': "application/json",
 			"Content-Type": "application/json"
 		},
-		body: JSON.stringify({
-			"webhook": {
-				"topic": "orders/create",
-				"address": "https://whatever.hostname.com/",
-				"format": "json"
-			}
-		})
 	})
 		.then(response => response.json())
 		.then(data => console.log(data));
