@@ -34,7 +34,7 @@
 			}
 			if (window.ppclient) {
 				window.ppclient.on('project-saved', getProjectData);
-				ppclient.on('lib-ready', _doSomething);
+				ppclient.on('lib-ready', getProjectData);
 			}
 			
 		}, 2000)
