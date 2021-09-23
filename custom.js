@@ -27,7 +27,7 @@
 				//})
 				//	.then(response => response.json())
 				//	.then(data => console.log(data));
-				fetch(baseUrl + `products/metafields.json`, {
+				fetch(baseUrl + `products.json`, {
 					method: 'GET',
 					headers: {
 						'X-Shopify-Access-Token': token,
