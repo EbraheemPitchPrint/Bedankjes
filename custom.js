@@ -8,7 +8,7 @@
 
 	if (window.location.pathname.indexOf('/products/') !== -1) {
 		if (_cartForm) {
-			_cartForm.insertAdjacentHTML('afterbegin', '<p class="line-item-property__field">< label for= "designurl" > designUrl</label ><input id="designurl" type="text" name="properties[_designUrl]"></p>');
+			_cartForm.insertAdjacentHTML('afterbegin', '<p class="line-item-property__field">< label for="designurl"> designUrl</label><input id="designurl" type="text" name="properties[_designUrl]"></p>');
 		};
 		
 		setTimeout(() => {
