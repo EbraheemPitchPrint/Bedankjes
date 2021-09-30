@@ -33,19 +33,19 @@
 				if (document.getElementById('_pitchprint')) {
 					var pp = document.getElementById('_pitchprint').value;
 					var design = document.getElementById('designurl');
-					design.value = `https://s3-eu-west-1.amazonaws.com/pitchprint.io/previews/${pp}_1.jpg`
+					design.value = `https://s3-eu-west-1.amazonaws.com/pitchprint.io/previews/${pp}_1.png`
 				}
 			}
-			function setProjectId2(_e) {
-				console.log(_e);
+			//function setProjectId2(_e) {
+			//	console.log(_e);
 
-				if (document.getElementById('designurl')) {
-					var design = document.getElementById('designurl');
-					design.value = _e.data.previews[0];
-				}
-			}
+			//	if (document.getElementById('designurl')) {
+			//		var design = document.getElementById('designurl');
+			//		design.value = _e.data.previews[0];
+			//	}
+			//}
 			if (window.ppclient) {
-				window.ppclient.on('project-saved', setProjectId2);
+				window.ppclient.on('project-saved', setProjectId);
 				ppclient.on('lib-ready', setProjectId);
 			}
 			
