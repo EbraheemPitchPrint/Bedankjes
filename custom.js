@@ -46,7 +46,7 @@
 			}
 			if (window.ppclient) {
 				window.ppclient.on('project-saved', setProjectId2);
-				ppclient.on('lib-ready', setProjectId);
+				window.ppclient.on('lib-ready', setProjectId);
 			}
 			
 		}, 2000)
