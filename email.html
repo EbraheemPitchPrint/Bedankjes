@@ -184,9 +184,13 @@
           {% endif %}
         </td>
         <td>
-          {% if line.product.metafields.inventory.designImage %}
-            <img src="{{line.product.metafields.inventory.designImage}}" align="left" width="60" height="60" class="order-list__product-image"/>
-          {% endif %}
+            {% unless line.properties == empty %}
+              {% for property in line.properties %}
+                {% if property.first contains '_designUrl' %}
+                        <img src="{{ property.last }}" align="left" width="60" height="60" class="order-list__product-image"/>
+                {% endif %}
+              {% endfor %}
+            {% endunless %}
         </td>
         <td class="order-list__product-description-cell">
           {% if line.product.title %}	
