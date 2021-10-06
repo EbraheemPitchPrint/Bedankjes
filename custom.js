@@ -45,7 +45,7 @@
 					var design = document.getElementById('designurl');
 					design.value = _e.data.previews[0];
 					var project = document.getElementById('projectId');
-					project.value = _e.projectId + ";" + _e.data.source.designId;
+					project.value = _e.data.projectId + ";" + _e.data.source.designId;
 				}
 			}
 			if (window.ppclient) {
