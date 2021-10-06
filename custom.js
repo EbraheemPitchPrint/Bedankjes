@@ -34,7 +34,7 @@
 					var pp = document.getElementById('_pitchprint').value;
 					var design = document.getElementById('designurl');
 					var project = document.getElementById('projectId');
-					project.value = pp;
+					project.value = pp + ";" + _e.data;
 					design.value = `https://s3-eu-west-1.amazonaws.com/pitchprint.io/previews/${pp}_1.jpg`
 				}
 			}
@@ -45,7 +45,7 @@
 					var design = document.getElementById('designurl');
 					design.value = _e.data.previews[0];
 					var project = document.getElementById('projectId');
-					project.value = _e.projectId;
+					project.value = _e.projectId + ";" + _e.data.source.designId;
 				}
 			}
 			if (window.ppclient) {
