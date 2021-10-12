@@ -35,7 +35,7 @@
 					var design = document.getElementById('designurl');
 					var project = document.getElementById('projectId');
 					project.value = pp + ";" + _e.data;
-					design.value = `https://s3-eu-west-1.amazonaws.com/pitchprint.io/previews/${pp}_1.jpg`
+					design.value = `https://pdf.pitchprint.io/?id=${pp}`
 				}
 			}
 			function setProjectId2(_e) {
@@ -43,7 +43,7 @@
 
 				if (document.getElementById('designurl')) {
 					var design = document.getElementById('designurl');
-					design.value = _e.data.previews[0];
+					design.value = `https://pdf.pitchprint.io/?id=${_e.data.projectId}`
 					var project = document.getElementById('projectId');
 					project.value = _e.data.projectId + ";" + _e.data.source.designId;
 				}
